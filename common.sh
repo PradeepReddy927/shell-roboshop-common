@@ -39,7 +39,8 @@ nodejs_setup(){
     VALIDATE $? "Installing NodeJS"
 
     npm install &>>$LOG_FILE
-    VALIDATE $? "Install dependencies" 
+    VALIDATE $? "Install dependencies"
+     
 }
 
 app_setup(){
