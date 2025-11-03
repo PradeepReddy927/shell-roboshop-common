@@ -3,9 +3,8 @@
 source ./common.sh
 
 
-
+check_root
 app_name=catalogue
-
 nodejs_setup
 systemd_setup
 
@@ -27,3 +26,5 @@ fi
 app_restart
 
 print_total_time
+
+
