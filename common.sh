@@ -8,6 +8,7 @@ LOGS_FOLDER="/var/log/shell-roboshop"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" # /var/log/shell-script/16-logs.log
 START_TIME=$(date +%s)
+SCRIPT_DIR=$PWD
 MONGODB_HOST=mongodb.dawsdevops86.fun
 
 mkdir -p $LOGS_FOLDER
@@ -40,7 +41,7 @@ nodejs_setup(){
 
     npm install &>>$LOG_FILE
     VALIDATE $? "Install dependencies"
-     
+
 }
 
 app_setup(){
